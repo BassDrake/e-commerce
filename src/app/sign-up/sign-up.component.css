@@ -1,0 +1,24 @@
+.sign-up {
+  text-align: center;
+  padding-top: 5em;
+  padding-left: 40em;
+  padding-right: 40em;
+}
+
+#sign-up-title {
+  font-size: 2.5em;
+  padding-bottom: 1em;
+}
+
+.form {
+  margin-top: 1em;
+}
+
+.button {
+  margin-top: 2em;
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red !important;
+}
+

@@ -1,0 +1,23 @@
+<form [formGroup]="loginForm" (ngSubmit)="onClick(email, password)">
+  <main class="form-signin w-100 m-auto login">
+
+    <h1 id="login-title" class="h3 mb-3 fw-normal">Please Login</h1>
+
+    <div class="form-floating form">
+      <input type="email" class="form-control" id="floatingInput" formControlName="email" placeholder="name@example.com"
+        #email>
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating form">
+      <input type="password" class="form-control" id="floatingPassword" formControlName="password"
+        placeholder="Password" #password>
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary button" [disabled]="!loginForm.valid" type="submit">Login</button>
+
+
+    <a style="text-decoration: none;" routerLink="/sign-up">Non sei Registrato?</a>
+
+  </main>
+</form>
