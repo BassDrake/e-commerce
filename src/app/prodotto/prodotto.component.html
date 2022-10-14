@@ -1,8 +1,17 @@
-<p>prodotto works!</p>
-<div>
-  <ul>
-    <li>{{prodotto?.nome}}</li>
-    <li>{{prodotto?.prezzo}}</li>
-    <li>{{prodotto?.slug}}</li>
-  </ul>
+
+<div class="card"
+style="width: 16rem; padding: 1em; padding-bottom: 0; margin-bottom: 2em;">
+  <img [src]="prodotto?.immagine" class="card-img-top" style="height: 300px; width: 226px;" alt="iPhone">
+  <div class="card-body">
+    <div class="d-flex">
+      <h3 class="card-title"><b>{{ prodotto?.nome }}</b></h3>
+      <p *ngIf=prodotto?.new style="color: red; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';">
+        <b><sup style="font-size: 12px;">&nbsp;New</sup></b>
+      </p>
+    </div>
+
+    <p class="card-text">Apple {{ prodotto?.nome }} <br> {{ prodotto?.descrizione }}</p>
+    <p class="card-text"><b>{{ prodotto?.prezzo | currency:'EUR'}}</b></p>
+    <!-- <a (click)="onClick(prodotto)" class="btn btn-primary" style="margin-left: 14px;">Aggiungi al Carrello</a> -->
+  </div>
 </div>
